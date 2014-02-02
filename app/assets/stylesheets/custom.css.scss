@@ -18,7 +18,13 @@ html {
 
 body {
   padding-top: 60px;
-}
+  background-image: url(https://abs.twimg.com/images/themes/theme1/bg.png);
+  background-position: left 40px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-color: #C0DEED;
+  }
 
 section {
   overflow: auto;
@@ -222,6 +228,8 @@ input {
 .microposts {
   list-style: none;
   margin: 10px 0 0 0;
+  background-color: white;
+  padding:1em;
 
   li {
     padding: 10px 0;
