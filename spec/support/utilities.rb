@@ -1,5 +1,5 @@
 def full_title(page_title)
-  base_title = "Ruby on Rails Tutorial Sample App"
+  base_title = "cs638 Twitter Clone"
   if page_title.empty?
     base_title
   else

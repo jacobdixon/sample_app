@@ -26,4 +26,13 @@ SampleApp::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['cs638-s3'],
+    :access_key_id => ENV['AKIAJWOO3NJ2M2GBNGSA'],
+    :secret_access_key => ENV['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']
+  }
+}  
 end
