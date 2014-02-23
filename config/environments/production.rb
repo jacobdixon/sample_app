@@ -77,13 +77,3 @@ SampleApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['cs638-s3'],
-    :access_key_id => ENV['AKIAJWOO3NJ2M2GBNGSA'],
-    :secret_access_key => ENV['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']
-  }
-}  
-end
