@@ -3,6 +3,7 @@
 
 <div class="row">
   <div class="span6 offset3">
+
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
@@ -19,11 +20,30 @@
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-      <%= f.submit "Upgrade Account", class: "btn btn-large btn-primary" %>
-
+      
     <% end %>
 
     <%= gravatar_for @user %>
     <a href="http://gravatar.com/emails">change</a>
   </div>
+
+<div class="span6 offset3">
+  <h3>Account Status: Ad-supported</h3>
+
+  <%= form_tag charges_path do %>
+    <article>
+      <label class="amount">
+        <span>Upgrade to ad-free acount for $1.99</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Premium Account"
+            data-amount="199"></script>
+  <% end %>
+ 
 </div>
+
+</div>
+

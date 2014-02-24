@@ -1,9 +1,11 @@
 class ChargesController < ApplicationController
+	before_action :signed_in_user
 
 	def new
 	end
 
 	def create
+	  #@user = User.find(params[:id])
 	  # Amount in cents
 	  @amount = 199
 
